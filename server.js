@@ -23,7 +23,6 @@ const io = socketio(server, {
 });
 
 // Middleware
-const cors = require('cors');
 app.use(cors({
   origin: ['https://si-anjem.netlify.app/', 'http://localhost:3000'],
   credentials: true
