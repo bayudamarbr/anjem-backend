@@ -23,8 +23,9 @@ const io = socketio(server, {
 });
 
 // Middleware
+const cors = require('cors');
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://si-anjem.netlify.app/',
+  origin: ['https://si-anjem.netlify.app/', 'http://localhost:3000'],
   credentials: true
 }));
 app.use(express.json());
