@@ -25,9 +25,9 @@ exports.registerDriver = async (req, res, next) => {
     });
     
     // Buat token
-    const token = jwt.sign({ id: driver._id }, process.env.JWT_SECRET, {
-      expiresIn: process.env.JWT_EXPIRE
-    });
+const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+  expiresIn: process.env.JWT_EXPIRE || process.env.JWT_EXPIRES_IN || '30d'
+});
     
     res.status(201).json({
       success: true,
