@@ -24,7 +24,7 @@ const io = socketio(server, {
 
 // Middleware
 app.use(cors({
-  origin: ['https://si-anjem.netlify.app', 'http://localhost:3000'],
+  origin: ['https://si-anjem.netlify.app', 'http://localhost:3000','http://127.0.2.2:8080'],
   credentials: true
 }));
 app.use(express.json());
